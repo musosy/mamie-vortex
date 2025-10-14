@@ -1,8 +1,9 @@
 name: Deploy static content to Pages
 
 on:
-  pull_request_target:
+  pull_request:
     branches: ["main"]
+    types: ["closed"]
   workflow_dispatch:
 
 permissions:
