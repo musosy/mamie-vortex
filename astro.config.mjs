@@ -5,5 +5,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://musosy.github.io/mamie-vortex/",
   base: "/",
-  trailingSlash: "always",
+  trailingSlash: "ignore",
 });
