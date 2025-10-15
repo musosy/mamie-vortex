@@ -44,7 +44,9 @@ jobs:
           git branch -D deploy || true
           git checkout --orphan deploy
 
-          find . -maxdepth 1 ! -name 'dist' ! -name '.git' -exec rm -rf {} +
+          shopt -s extglob
+          rm -rf !(.git|dist)
+          shopt -u extglob
 
           mv dist/* .
 
